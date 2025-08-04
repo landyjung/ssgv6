@@ -1,0 +1,121 @@
+.schedule_wrap{
+    h3 { 
+        font-size: 1.2rem; font-weight: 800; color:var(--gray-normal);
+        margin-bottom: 2rem; display: flex;       
+        position: relative; padding-left:10px;
+    }
+    h3::before {
+        content: ""; display: block; height:32px; width:35px; 
+        background-color: var(--yellow-dark); z-index: -10;
+        position: absolute; top:0; left:5px;
+    }
+    h3::after {
+        content: ""; display: block; height:32px; width:5px; 
+        background-color: var(--gray-normal); z-index: -10;
+        position: absolute; top:0; left:0;
+    }
+    .schedule_table{
+        display: flex; flex-direction: column; gap: 30px;
+        .table_item{ 
+            padding:20px;
+            display: flex; justify-content: space-between; 
+            border: 1px solid var(--gray-light);
+            border-radius: 15px;
+            @media(max-width:768px){
+                flex-direction: column; align-items: center; justify-content: center;
+            }
+            &:hover{ box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); transition: all .3s;}
+            .when {
+                display: flex; align-items: center; gap:5px;
+                @media(max-width:768px){
+                    font-size: .9rem;
+                }
+                .clock { 
+                    width:18px; display: block; color:var(--gray-normal); 
+                    size:12px;                    
+                }
+                .date { width:150px; font-family: var(--mainEng-font); color:var(--gray)}
+                .hw_btn { 
+                    width:60px;
+                    @media(max-width:768px){
+                        width:40px;
+                    }
+                }
+            }
+            .who {
+                display: flex; align-items: center; gap:20px;
+                img { width:80px}
+                span { font-family: var(--mainKor-font); color: var(--navy-light); font-weight: 900;}
+            }
+            .where {
+                display: flex; align-items: center; gap:10px;
+                .map { width:20px; color:var(--gray-normal)}
+                span { font-size: 0.8rem; white-space: nowrap;}
+                .rsv_btn {
+                    display: block; font-size: .8rem; 
+                    text-align: center; padding:3px 5px;
+                    border:1px solid var(--gray-light); border-radius: 5px; 
+                    color: var(--black-dark);
+                    font-family: var(--mainKor-font);
+                    cursor: pointer;
+                    &:hover{ background-color: var(--navy-light); color:var(--white); border: 1px solid var(--navy-dark);}
+                }
+            }
+        }
+    }
+    .popup_modal{
+        z-index: 10000;
+        position: fixed; top: 0; left: 0;
+        width: 100vw; height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        .popup_box{
+            z-index: 10000;
+            border: 3px solid var(--red);
+            border-radius: 1rem; 
+            background-color: var(--white);
+            padding: 3rem; 
+            position: absolute; left:50%; top:50%; transform: translate(-50%, -50%);
+            width: 30vw; height: 40vw; min-width: 350px; min-height: 400px;
+            .weather_box{
+                display: flex; flex-direction: column;                align-items: center;
+                .close_btn{
+                    width:3rem; height:3rem; border-radius: 50%;
+                    border: 3px solid var(--red-light);
+                    display: flex; justify-content: center; align-items: center;
+                    margin-bottom: 1rem;
+                    .x_btn{ 
+                        color:var(--red); font-weight: 900;
+                        width:30px; height:30px;
+                    }
+                }                
+                .where{ 
+                    color:var(--gray-normal); font-size: 1.2rem; font-weight: 600;
+                    @media(max-width:768px){
+                        font-size: 1.5rem;
+                    }
+                }
+                .when{ font-size: 1.8rem; font-weight: 700; color:var(--navy-light)} 
+                .weather{
+                    display: flex; justify-content: center; align-items: center; flex-direction: column;
+                    gap:.5rem;
+                    .wd_icon{ 
+                        width:10rem; height:10rem; color:var(--gray-light2);
+                        @media(max-width:768px){
+                            width:5rem; height:5rem;
+                        }
+                    }
+                    .wd_temp{font-size: 3rem; color:var(--red);
+                        font-weight: 700;
+                        >span{ font-size: 1.5rem; color:var(--gray-light2)}
+                    }
+                    .feels {
+                        font-size: .9rem;
+                        > strong {font-weight: 600; color:var(--red-light)}
+                    }
+                    .desc{ font-size: .9rem;}
+                }
+            }
+        }
+    }
+
+}

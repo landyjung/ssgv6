@@ -1,0 +1,52 @@
+:root {
+    --mainEng-font:'GongGothicMedium';
+    --mainKor-font:'Noto Sans KR';
+    --mainNum-font:'GongGothicMedium';
+
+    --mainBg-color:#fff;
+    --white:#fff;
+    
+    --yellow-dark:#FFC241;
+    --yellow:#F7FF0A;
+    --light-yellow:#F5FFA6;
+
+    --black-dark:#242424;
+    --black-light:#5B5B5B;
+    
+    --gray-dark:#131313;
+    --gray-normal:#494949;
+    --gray:#393939;
+    --gray-light:#ebebeb;
+    --gray-light2:#aaaaaa;
+
+
+    --navy:#250965;
+    --navy-dark:#180642;
+    --navy-light:#341284;
+    --navy-pastel:#6B64CA;
+
+    --red : #CE152D;
+    --red-dark:#8E0808;
+    --red-light:#FF4B4B;
+    
+    --green : #004848;
+    --green-dark:#083737;
+    --green-light:#006363;
+
+
+    font-family: var(--mainEng-font), var(--mainKor-font);
+    font-size:16px;
+    line-height:1.6;
+    font-weight:400;
+
+    text-rendering:optimizeLegibility; //가독성 최적화 
+    font-synthesis: none; //italic, bold 지정폰트 없는 경우 대체 폰트 없이 스타일 유지
+    -webkit-font-smoothing:antialiased; // 글자 외곽 계단 현상 없이 깨끗이 표현, chrome, safafi
+    -moz-osx-font-smooting:grayscale;   //firefox, macOs
+    -webkit-text-size-adjust: 100%; //모바일에서 텍스트 크기 자동조정 하지 않고 지정 크기 그대로 
+
+    @media (max-width:800px){
+        font-size:14px;
+        line-height: 1.4;
+    }
+}

@@ -1,0 +1,124 @@
+#team{ 
+    width:90%; height:100%; margin:0 auto;
+    margin-top:200px;
+    margin-bottom:100px;    
+    @media(max-width:768px)  {
+        margin-top:150px;
+        margin-bottom:50px;
+    }
+    .main_title { 
+        padding: 50px 0;
+        font-size: 2.5rem; font-weight: bold; text-align: center; 
+        font-family: var(--mainEng-font); color:var(--green-light); 
+        text-transform: uppercase;  line-height: 0.1rem; 
+    }
+    .main_title::after {
+        content: ""; display: block; width:100%; height:3px; 
+        background-color: var(--green); opacity: .3; border-radius: 3px;
+        margin-bottom: 3rem;
+    }
+    .history_wrap {
+        margin-bottom: 10rem;
+        h2 { 
+            font-size: 1.2rem; font-weight: 800; color:var(--gray-normal);
+            margin-bottom: 2rem; display: flex;       
+            position: relative; padding-left:10px;
+        }
+        h2::before {
+            content: ""; display: block; height:32px; width:35px; 
+            background-color: var(--yellow-dark); z-index: -10;
+            position: absolute; top:0; left:5px;
+        }
+        h2::after {
+            content: ""; display: block; height:32px; width:5px; 
+            background-color: var(--gray-normal); z-index: -10;
+            position: absolute; top:0; left:0;
+        }
+        .year_wrap {
+            width:100%; background-color: var(--white);
+            padding:1.5rem;
+            border:1px solid var(--gray-light);
+            border-radius: 2rem;
+            @media (max-width:768px){
+                border-radius: 1rem;
+            }
+        }
+        .year_wrap > ul{ 
+            display: flex; gap:3rem; 
+            justify-content: center;
+            font-family: var(--mainEng-font);
+            font-size: 1.5rem; 
+            li > button.active{
+                color:var(--yellow-dark);
+            }
+        }
+        .month_select { 
+            display: block; width:100%; 
+            padding:2rem 0;
+            border-bottom: 2px solid var(--gray-light);
+            margin-bottom: 3rem;
+        }
+        .month_select > ul { 
+            margin: 0 auto;     
+            display: flex; gap:0.5%; justify-content:space-between;
+            font-family: var(--mainEng-font);
+            color:var(--green-light); 
+            flex-wrap: wrap;
+            @media (max-width:768px){
+                gap:.5rem;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+            li{ 
+                background-color: var(--gray-dark); color:#fff;
+                width:8%; min-width:3.2rem;
+                padding:10px 10px; line-height: 1rem;
+                @media (max-width:768px){
+                    width:15%;
+                    font-size:.8rem;
+                    padding:5px 5px;
+                }
+            }
+        }
+        .month_all_wrap {
+            display: flex; flex-direction: column; gap:3rem;
+            .month_box {
+                display: flex; gap:3rem;
+                .month_img {
+                    width:30vw;
+                    display: block; width:30vw; height:22vw;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    border-radius: 1rem;
+                    border:1px solid var(--gray-light)
+                }
+                .text_box {
+                    width:60vw;
+                    .title { 
+                        font-family: var(--mainEng-font); font-size: 1.5rem; color:var(--green-light);
+                        border-bottom: 2px solid var(--yellow-dark);
+                        width:100%; display:flex; height:45px; align-items: center; gap:1rem;
+                        margin-bottom: 1rem; padding-left: 1rem;
+                    }
+                    > ul .day_text{
+                        line-height: 2.3rem;
+                        display: flex; gap:1rem;
+                        .day { 
+                            width:3.5rem ; text-align: right; min-width: 3.5rem;
+                            font-size: .9rem; font-family: var(--mainEng-font); 
+                            color: var(--gray-light2);
+
+                        }
+                        .description {font-size: .9rem ;
+                            @media (max-width:768px) {
+                                letter-spacing: -0.01rem;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

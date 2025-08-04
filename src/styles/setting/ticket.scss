@@ -1,0 +1,48 @@
+#ticket{ 
+    width:90%; height:100%; margin:0 auto;
+    margin-top:200px;
+    margin-bottom:100px;   
+    @media(max-width:768px)  {
+        margin-top:150px;
+        margin-bottom:50px;
+    } 
+    .main_title { 
+        padding: 50px 0;
+        font-size: 2.5rem; font-weight: bold; text-align: center; 
+        font-family: var(--mainEng-font); color:var(--red-light); 
+        text-transform: uppercase;  line-height: 0.1rem; 
+    }
+    .main_title::after {
+        content: ""; display: block; width:100%; height:3px; 
+        background-color: var(--red); opacity: .3; border-radius: 3px;
+        margin-bottom: 3rem;
+    }
+    
+    .ticket_wrap {
+        padding-top:3rem; 
+        h3 { 
+            font-size: 1.2rem; font-weight: 800; color:var(--gray-normal);
+            margin-bottom: 2rem; display: flex;       
+            position: relative; padding-left:10px;
+        }
+        h3::before {
+            content: ""; display: block; height:32px; width:35px; 
+            background-color: var(--yellow-dark); z-index: -10;
+            position: absolute; top:0; left:5px;
+        }
+        h3::after {
+            content: ""; display: block; height:32px; width:5px; 
+            background-color: var(--gray-normal); z-index: -10;
+            position: absolute; top:0; left:0;
+        }
+        .reserv_01 {
+            display: flex; 
+            @media (max-width:768px) {
+                flex-direction: column;
+            }
+            .block_choice {flex: 1;}
+            .reserv_box{flex: 1;}
+        }
+    }    
+
+}
